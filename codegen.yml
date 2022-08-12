@@ -1,0 +1,12 @@
+overwrite: true
+schema: ./app/schema-gen.ts
+require:
+  - ts-node/register/transpile-only
+generates:
+  ./app/generated-models.ts:
+    config:
+      contextType: "GraphQLModules.Context"
+      maybeValue: T
+    plugins:
+      - typescript
+      - typescript-resolvers

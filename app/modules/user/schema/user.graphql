@@ -1,0 +1,15 @@
+type User {
+  id: ID!
+  email: String!
+  profile: Profile
+}
+
+type Profile {
+  age: Int
+  name: String
+}
+
+type Query {
+  users: [User]
+  user(id: ID!): User!
+}
